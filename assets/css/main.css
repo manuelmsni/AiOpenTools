@@ -1,0 +1,178 @@
+body{
+    margin: 0;
+}
+
+header{
+    background: var(--header-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--header-title);
+    font-family: system-ui;
+}
+
+header h1, h2{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+header h1{
+    width: 100%;
+    font-size: 50px;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: var(--nav-background);
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.322) 0 0 5px 1px;
+}
+
+nav>ul{
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 1rem;
+}
+    
+nav>ul>li{
+    list-style: none;
+}
+
+nav>ul>li>a{
+    display: block;
+    padding: 0.7rem;
+    box-shadow: var(--nav-a-border);
+    margin: 0.5rem;
+    text-decoration: none;
+    color: var(--nav-a-color);
+    cursor: pointer;
+}
+
+nav>ul>li>a:hover{
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+nav>.toogle{
+    display: none;
+    position: absolute;
+    right: 1rem;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    background: var(--body-background);
+}
+
+.container>.widgets{
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+}
+
+.container>.widgets>aside{
+    position: sticky;
+    top: 64px;
+    margin: 0.5rem;
+    padding: 1rem;
+    box-shadow: rgb(0 0 0 / 41%) 0 0 3px 1px;
+    background: var(--post-background);
+}
+
+.container>.widgets>section{
+    margin: 0.5rem;
+    padding: 1rem;
+    box-shadow: rgb(0 0 0 / 41%) 0 0 3px 1px;
+    background: var(--post-background);
+}
+
+.container>.widgets>section>ul{
+    display: flex;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.container>.widgets>section>ul>li{
+    margin-left: 1rem;
+}
+
+.container>.widgets>section>ul>li>button{
+    cursor: pointer;
+    padding: 0.5rem;
+    box-shadow: rgb(0 0 0 / 41%) 0 0 3px 1px;
+    border: 1px solid transparent;
+}
+
+.container>.widgets>section>ul>li>button.active{
+    border-color: rgb(255, 208, 0);
+    box-shadow: rgba(255, 208, 0, 0.658) 0 0 3px 1px;
+}
+
+.container>.widgets>section>ul>li>button:hover{
+    border: 1px solid rgb(151, 151, 151);
+}
+
+.container>.content{
+    width: 100%;
+    padding: .5rem;
+}
+
+.container>.content>article{
+    max-width: 1100px;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    padding:2rem;
+    box-shadow: rgb(0 0 0 / 41%) 0 0 3px 1px;
+    background: var(--post-background);
+    overflow: auto;
+}
+
+.container>.content>article>h2{
+    margin-left: 1em;
+}
+
+.container>.content>article>figure{
+    float: left;
+}
+
+.container>.content>article>figure>img{
+    width: 300px;
+    max-width: 100%;
+}
+
+.container>.content>article>p{
+    text-align: justify;
+}
+
+.container>.content>article>p:last-child{
+    text-align: right;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .container>.widgets{
+        position: fixed;
+        bottom: 0;
+        height: fit-content;
+        padding: 1rem;
+        background: #0000008c;
+    }
+
+    nav>.toogle{
+        display: block;
+    }
+}
+
+footer{
+    background: var(--footer-background);
+    height: 80px;
+}
+
+.hidden{
+    display: none !important;
+}

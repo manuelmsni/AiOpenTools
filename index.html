@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link id="tema" rel="stylesheet" href="">
+    <script>
+        //Añade la ubicación del tema a la url
+        if(window.location.href.indexOf("tema") == -1){
+            window.location = window.location.href + "?tema=assets/css/tema-mint.css";
+        }
+        //Obtiene la ubicación del tema de la url
+        else{
+            var currentURL = window.location.href;
+            var inicio = currentURL.indexOf("tema=") + 5;
+            var substr = currentURL.substring(inicio);
+            stylesheet.href = substr;
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://manuelmsni.github.io/IMAGG/IMAGG_1.0/css/IMAGG.css">
+</head>
+<body>
+
+    <header>
+        <h1>Inteligencias artificiales</h1>
+        <h2>Las AI más útiles</h2>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#ChatGPT">ChatGPT</a></li>
+            <li><a href="#Whisper">Whisper</a></li>
+            <li><a href="#Midjurney">Midjurney</a></li>
+            <li><a href="#StableDiffusion">StableDiffusion</a></li>
+        </ul>
+        <ul class="toogle">
+            <li><a id="toogleWidgets">Aside</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+
+        <div class="widgets">
+            <section>
+                <h2>Idiomas:</h2>
+                <ul>
+                    <li><button class="idioma" src="index_en.html">Inglés</button></li>
+                    <li><button class="idioma active" >Español</button></li>
+                </ul>
+                <h2>Temas:</h2>
+                <ul>
+                    <li><button class="tema" src="assets/css/tema-mint.css">Menta</button></li>
+                    <li><button class="tema" src="assets/css/tema-cafe.css">Café</button></li>
+                </ul>
+            </section>
+            <aside>
+                <h2>¿Que es una AI?</h2>
+                <p>La inteligencia artificial es, en las ciencias de la computación, son los sistemas o la combinación de algoritmos con el propósito de crear máquinas que imitan la inteligencia humana para realizar tareas y pueden mejorar conforme la información que recopilan.</p>
+            </aside>
+        </div>
+
+        <div class="content">
+            <article id="ChatGPT">
+                <h2>ChatGPT</h2>
+                <figure>
+                    <img class="triggerIMAGG"title="ChatGpt" alt="Logotipo de ChatGPT" src="assets/img/ChatGpt.jpg">
+                    <figcaption>Imagen representativa de ChatGPT</figcaption>
+                </figure>
+                <p>ChatGPT es un chatbot de inteligencia artificial creado por OpenAI en 2022. Se especializa en la conversación y es un gran modelo de lenguaje entrenado con técnicas de aprendizaje supervisadas y de refuerzo. Se basa en una versión mejorada de GPT-3, llamada GPT-3.5.</p>
+                <p>Fue lanzado al público el 30 de noviembre de 2022 y ha recibido elogios por sus respuestas detalladas y claras, pero también ha sido criticado por su precisión factual. Al principio, el servicio fue gratuito, pero OpenAI tiene planes de monetizarlo en el futuro. Ya en el 4 de diciembre, se estimaba que ChatGPT tenía más de un millón de usuarios.</p>
+                <p>ChatGPT fue mejorado sobre GPT-3.5 a través del aprendizaje supervisado y de refuerzo. Los entrenadores humanos jugaron ambos papeles en las conversaciones en el aprendizaje supervisado, y en el aprendizaje por refuerzo, los entrenadores humanos clasificaron las respuestas que el modelo generó en conversaciones previas. Estas clasificaciones se usaron para crear "modelos de recompensa" en los que el modelo se ajustó aún más mediante varias iteraciones de optimización de política próxima. Estos algoritmos de optimización son rentables y proporcionan un rendimiento más rápido que otros. ChatGPT fue entrenado en colaboración con Microsoft en su infraestructura de supercomputación Azure.</p>
+                <p>Además, ChatGPT ha sido ampliamente utilizado en aplicaciones como asistentes virtuales, atención al cliente y resolución de problemas, entre otros. Muchas empresas han adoptado ChatGPT como una solución eficiente y costo-efectiva para automatizar sus procesos de atención al cliente y mejorar la experiencia del usuario.</p>
+                <p>ChatGPT también es conocido por su capacidad de aprender y evolucionar continuamente, gracias a su sistema de aprendizaje automático. Cada vez que un usuario interactúa con ChatGPT, el modelo aprende y mejora su capacidad para responder a futuras preguntas.</p>
+                <p>En adición, OpenAI ha establecido un sistema de retroalimentación para garantizar que ChatGPT cumpla con ciertos estándares éticos y de privacidad, y ha tomado medidas para mitigar los riesgos de desinformación y manipulación que pueden surgir con la utilización de un modelo de IA.</p>
+                <p>En resumen, ChatGPT es un avance importante en el campo de la inteligencia artificial y está revolucionando la forma en que las empresas interactúan con sus clientes y resuelven problemas.</p>
+                <p>Bibliografía: ChatGPT</p>
+                <p><a href="https://openai.com/blog/chatgpt" target="_blank">Blog oficial</a> ; <a href="https://chat.openai.com/chat" target="_blank">ChatGPT</a></p>
+            </article>
+            <article id="Whisper">
+                <h2>Whisper OpenAI</h2>
+                <figure>
+                    <img class="triggerIMAGG" src="assets/img/Whisper.jpg">
+                    <figcaption>Imagen representativa de Whisper</figcaption>
+                </figure>
+                <p>Whisper es una tecnología innovadora en el campo del reconocimiento automático de voz (ASR). Este sistema ha sido entrenado con un gran volumen de datos multilingües y multitarea recopilados de la web, totalizando 680.000 horas de entrenamiento supervisado. Esta gran cantidad y variedad de datos ha permitido a Whisper ser más resistente a los acentos, el ruido de fondo y el lenguaje técnico, lo que a su vez mejora la precisión en la transcripción y la traducción. Whisper es un modelo de código abierto que se puede utilizar como base para desarrollar aplicaciones útiles y para investigaciones futuras en el procesamiento de voz.</p>
+                <p>En Whisper, aproximadamente un tercio de los datos de audio no están en inglés. En lugar de transcribirlos directamente al inglés, se les asigna la tarea de transcribir en el idioma original o traducir al inglés. Este enfoque ha demostrado ser especialmente efectivo para aprender la traducción de voz a texto y ha superado el estado del arte en la tarea de traducción de CoVoST2 en inglés. En resumen, Whisper es un sistema de ASR altamente capacitado y flexible que puede transcribir y traducir varios idiomas.</p>
+                <p>El sistema Whisper utiliza tecnologías avanzadas de procesamiento de lenguaje natural y de aprendizaje automático para garantizar una precisión máxima en la transcripción y la traducción de diferentes idiomas. Gracias a su amplia gama de idiomas compatibles, Whisper se adapta a las necesidades de una amplia gama de usuarios, desde empresas multinacionales hasta individuos que necesitan transcribir y traducir audio de diferentes idiomas. </p>
+                <p>Además, Whisper también se esfuerza por mejorar continuamente su capacidad de reconocimiento de voz y traducción, gracias a su naturaleza de código abierto y código de inferencia. Los investigadores y desarrolladores pueden utilizar el sistema como base para crear aplicaciones innovadoras y para realizar futuras investigaciones en el campo del procesamiento de voz. </p>
+                <p>En resumen, Whisper es un sistema de reconocimiento de voz y traducción de última generación, diseñado para ofrecer resultados precisos y confiables para una amplia gama de idiomas. Con su enfoque en la solidez y la diversidad, Whisper se ha consolidado como una solución líder en el campo del procesamiento de voz y traducción automática. </p>
+                <p>Bibliografía: ChatGPT</p>
+                <p><a href="https://openai.com/blog/whisper" target="_blank">Blog oficial</a> ; <a href="https://colab.research.google.com/drive/1CvvYPAFemIZdSOt9fhN541esSlZR7Ic6?usp=sharing#scrollTo=-9_I0W3tqTjr" target="_blank">Google colab</a></p>
+            </article>
+            <article id="Midjurney">
+                <h2>Midjurney</h2>
+                <figure>
+                        <img class="triggerIMAGG" src="assets/img/midjurney.jpg">
+                        <figcaption>Imagen representativa de Midjurney</figcaption>
+                </figure>
+                <p>Midjourney es un laboratorio de investigación de inteligencia artificial que ofrece un programa con el cual sus usuarios pueden crear imágenes a partir de descripciones textuales. Este programa se encuentra en una línea similar a Dall-e de OpenAI y al Stable Diffusion de código abierto.</p>
+                <p>El 13 de julio de 2022, Midjourney anunció el comienzo de su versión beta abierta después de haber funcionado en una versión beta cerrada. El equipo de Midjourney está liderado por David Holz, quien también es cofundador de Leap Motion. La herramienta utiliza un modelo de negocio freemium, donde los usuarios pueden acceder a un nivel gratuito limitado o optar por niveles de pago que ofrecen acceso más rápido, mayor capacidad y funciones adicionales.</p>
+                <p>Los usuarios pueden crear obras de arte con Midjourney a través de un bot alojado en Discord. Para acceder a Midjourney, los usuarios pueden enviar mensajes directos al bot o invitar al bot a un servidor de terceros. Para crear imágenes, los usuarios deben utilizar el comando /imagine y escribir una descripción en inglés (prompt) en un formato similar al utilizado por otras herramientas de generación de arte basadas en inteligencia artificial.</p>
+                <p>Midjourney es un avance en el campo de la inteligencia artificial y la generación de imágenes. La herramienta es única en su enfoque en la generación de imágenes a partir de descripciones textuales y se destaca por su capacidad de crear obras de arte a partir de simples órdenes dadas a través de un bot de Discord. </p>
+                <p>El equipo de Midjourney está formado por expertos en la materia, liderados por David Holz, cofundador de Leap Motion, una compañía pionera en el campo de la tecnología de movimiento. Con su experiencia y conocimiento en el campo de la inteligencia artificial, Midjourney se posiciona como una de las herramientas más prometedoras en su área. </p>
+                <p>Además de su capacidad para crear imágenes únicas a partir de descripciones textuales, Midjourney también ofrece un modelo de negocio freemium, lo que significa que los usuarios pueden acceder a un nivel básico gratuito y también pueden optar por niveles de pago con acceso más rápido, mayor capacidad y funciones adicionales. </p>
+                <p>A pesar de que Midjourney aún está en etapa beta, su aceptación y uso han aumentado significativamente desde su lanzamiento. Se espera que en el futuro, Midjourney continúe evolucionando y mejorando sus funciones y capacidades para satisfacer las necesidades y expectativas de sus usuarios. </p>
+                <p>Bibliografía: ChatGPT</p>
+                <p><a href="https://docs.midjourney.com/docs/quick-start" target="_blank">Documentación</a> ; <a href="https://discord.com/invite/midjourney" target="_blank">Discord oficial</a></p>
+            </article>
+            <article id="StableDiffusion">
+                <h2>Stable diffusion</h2>
+                <figure>
+                    <img class="triggerIMAGG" src="assets/img/stableDiffusion.jpg">
+                    <figcaption>Imagen generada mediante StableDiffusion</figcaption>
+                </figure>
+                <p>StableDiffusion es un modelo de inteligencia artificial de código abierto que se especializa en la generación de imágenes y texto. Desarrollado por un equipo de investigadores y desarrolladores de todo el mundo, StableDiffusion utiliza técnicas avanzadas de aprendizaje profundo para crear imágenes y texto en tiempo real. </p>
+                <p>Este modelo se diferencia de otros en su enfoque en la estabilidad y la calidad de la generación de imágenes y texto. Al utilizar una combinación de técnicas de aprendizaje supervisado y no supervisado, StableDiffusion es capaz de producir imágenes y texto coherentes y de alta calidad, sin sacrificar la velocidad de generación. </p>
+                <p>Además de su capacidad para generar imágenes y texto, StableDiffusion también incluye una amplia variedad de herramientas y recursos para desarrolladores, lo que permite a los usuarios personalizar y mejorar su modelo según sus necesidades específicas. Con una comunidad activa de desarrolladores y una amplia documentación, StableDiffusion es una de las opciones más accesibles y personalizables en el campo de la generación de imágenes y texto. </p>
+                <p>En general, StableDiffusion es un modelo de inteligencia artificial poderoso y versátil que ofrece una gran cantidad de posibilidades para los usuarios interesados en la generación de imágenes y texto. Con su enfoque en la estabilidad, la calidad y la personalización, StableDiffusion es una opción atractiva para aquellos que buscan un modelo de IA avanzado para sus proyectos. </p>
+                <p><a href="https://docs.midjourney.com/docs/quick-start" target="_blank">Github</a> ; <a href="https://colab.research.google.com/drive/1ZbXo2qmS3zfgl6GsYEN1ppCSoCBOfQBI#scrollTo=SaAJk33ppFw1" target="_blank">Google colab</a></p>
+            </article>
+        </div>
+
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script>
+
+        document.getElementById("toogleWidgets").addEventListener("click", function(){
+            document.querySelector('.widgets').classList.toggle('hidden');
+        });
+
+        window.addEventListener('resize', function(){
+            const widgets = document.querySelector('.widgets');
+            if (window.innerWidth <= 1100) {
+                if(!widgets.classList.contains('hidden')){
+                    widgets.classList.add('hidden');
+                }
+            } else {
+                if(widgets.classList.contains('hidden')){
+                    widgets.classList.remove('hidden');
+                }
+            }
+        });
+
+
+    </script>
+    <script src="assets/js/util.js"></script>
+    <script src="https://manuelmsni.github.io/IMAGG/IMAGG_1.0/js/IMAGG.js"></script>
+</body>
+</html>

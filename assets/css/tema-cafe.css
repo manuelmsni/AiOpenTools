@@ -1,0 +1,12 @@
+:root{    
+    --header-background: linear-gradient(0deg, rgb(197 165 134) 0%, rgba(224,208,191,1) 100%);
+    --header-title: rgba(0, 0, 0, 0.46);
+
+    --nav-background: linear-gradient(90deg, rgb(66 60 55) 0%, rgb(88 83 78) 56%, rgb(88 81 72) 100%);
+    --nav-a-border: rgb(255 255 255 / 22%) 0 0 3px 1px;
+    --nav-a-color: rgb(255 255 255 / 62%);
+
+    --footer-background: linear-gradient(90deg, rgb(66 60 55) 0%, rgb(88 83 78) 56%, rgb(88 81 72) 100%);
+    --body-background:#f5eedb;
+    --post-background: white;
+}

@@ -22,58 +22,11 @@ const idiomas = document.querySelectorAll('.idioma');
 
 
 
-/*
-// Obtener la URL actual
-const currentURL = window.location.href;
-
-// Buscar una cadena específica en la URL
-if (currentURL.indexOf("$mint") != -1) {
-    stylesheet.setAttribute('href') = "assets/css/tema-cafe.css";
-} else if (currentURL.indexOf("$cafe") != -1) {
-    stylesheet.setAttribute('href') = "assets/css/tema-cafe.css";
-}
-*/
-/*
-// Obtener la URL actual
-var currentURL = window.location.href;
-
-// Añadir un parámetro de consulta a la URL
-currentURL = currentURL + "?clave=valor";
-
-// Redirigir a la nueva URL
-window.location = currentURL;
-
-// Buscar el parámetro de consulta en la URL
-var params = new URLSearchParams(currentURL.search);
-
-// Obtener el valor de una clave en particular
-var valor = params.get("clave");
-
-// Hacer algo con el valor (por ejemplo, mostrarlo en una alerta)
-alert(valor);
-*/
-
-
-
-
-
-
-
-
 window.addEventListener("load", function(){
-
-    //Añade la ubicación del tema a la url
-    if(window.location.href.indexOf("tema") == -1){
-        window.location = window.location.href + "?tema=" + stylesheet.getAttribute('href');
-    } else{
-        var currentURL = window.location.href;
-        var inicio = currentURL.indexOf("tema=") + 5;
-        var substr = currentURL.substring(inicio);
-        stylesheet.href = substr;
-    }
     
     if (window.innerWidth <= 1100) {
         document.querySelector('.widgets').classList.add('hidden');
+        document.querySelector('.models').classList.add('hidden');
     };
     buttons.forEach(button => {
         if(stylesheet.getAttribute('href') == button.getAttribute('src')){
@@ -113,4 +66,32 @@ buttons.forEach(button => {
             */
         ;}
     });
+});
+
+
+document.getElementById("toogleWidgets").addEventListener("click", function(){
+    document.querySelector('.widgets').classList.toggle('hidden');
+});
+document.getElementById("toogleModels").addEventListener("click", function(){
+    document.querySelector('.models').classList.toggle('hidden');
+});
+
+window.addEventListener('resize', function(){
+    const widgets = document.querySelector('.widgets');
+    const models = document.querySelector('.models');
+    if (window.innerWidth <= 1100) {
+        if(!widgets.classList.contains('hidden')){
+            widgets.classList.add('hidden');
+        }
+        if(!models.classList.contains('hidden')){
+            models.classList.add('hidden');
+        }
+    } else {
+        if(widgets.classList.contains('hidden')){
+            widgets.classList.remove('hidden');
+        }
+        if(models.classList.contains('hidden')){
+            models.classList.remove('hidden');
+        }
+    }
 });

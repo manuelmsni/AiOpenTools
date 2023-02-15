@@ -7,17 +7,17 @@
     <title>IA</title>
     <link id="tema" rel="stylesheet" href="">
     <script>
-        //Añade la ubicación del tema a la url
-        if(window.location.href.indexOf("tema") == -1){
-            window.location = window.location.href + "?tema=assets/css/tema-mint.css";
-        }
-        //Obtiene la ubicación del tema de la url
-        else{
-            var currentURL = window.location.href;
-            var inicio = currentURL.indexOf("tema=") + 5;
-            var substr = currentURL.substring(inicio);
-            stylesheet.href = substr;
-        }
+        window.addEventListener("load", function(){
+            //Añade la ubicación del tema a la url
+            if(window.location.href.indexOf("tema") == -1){
+                window.location = window.location.href + "?tema=" + stylesheet.getAttribute('href');
+            } else{
+                var currentURL = window.location.href;
+                var inicio = currentURL.indexOf("tema=") + 5;
+                var substr = currentURL.substring(inicio);
+                stylesheet.href = substr;
+                }
+        });
     </script>
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://manuelmsni.github.io/IMAGG/IMAGG_1.0/css/IMAGG.css">
@@ -30,7 +30,10 @@
     </header>
     
     <nav>
-        <ul>
+        <ul class="toogleMenu">
+            <li><a id="toogleModels">Models</a></li>
+        </ul>
+        <ul class="models">
             <li><a href="#ChatGPT">ChatGPT</a></li>
             <li><a href="#Whisper">Whisper</a></li>
             <li><a href="#Midjurney">Midjurney</a></li>
@@ -129,27 +132,6 @@
 
     </footer>
 
-    <script>
-
-        document.getElementById("toogleWidgets").addEventListener("click", function(){
-            document.querySelector('.widgets').classList.toggle('hidden');
-        });
-
-        window.addEventListener('resize', function(){
-            const widgets = document.querySelector('.widgets');
-            if (window.innerWidth <= 1100) {
-                if(!widgets.classList.contains('hidden')){
-                    widgets.classList.add('hidden');
-                }
-            } else {
-                if(widgets.classList.contains('hidden')){
-                    widgets.classList.remove('hidden');
-                }
-            }
-        });
-
-
-    </script>
     <script src="assets/js/util.js"></script>
     <script src="https://manuelmsni.github.io/IMAGG/IMAGG_1.0/js/IMAGG.js"></script>
 </body>

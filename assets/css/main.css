@@ -29,6 +29,7 @@ nav{
     background: var(--nav-background);
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.322) 0 0 5px 1px;
+    height: 56px;
 }
 
 nav>ul{
@@ -36,6 +37,10 @@ nav>ul{
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 1rem;
+}
+
+nav>ul:first-child{
+    display: none;
 }
     
 nav>ul>li{
@@ -165,6 +170,21 @@ nav>.toogle{
 
     nav>.toogle{
         display: block;
+    }
+
+    nav>ul:first-child{
+        display: block;
+    }
+
+    nav>ul:nth-child(2){
+        display: block;
+        position: absolute;
+        left: 0px;
+        transform: translateY(49px);
+    }
+
+    nav>ul:nth-child(2)>li>a{
+        background: white;
     }
 }
 
